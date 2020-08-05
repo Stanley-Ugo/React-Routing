@@ -1,11 +1,12 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import { BrowserRouter, Route, NavLink, Switch, Redirect } from "react-router-dom";
+import { BrowserRouter, Route, NavLink, Switch } from "react-router-dom";
 
 import Home from "./components/home";
 import Posts from "./components/post";
 import Profile from "./components/profile";
 import PostItem from "./components/post_item";
+import NotFound from './components/404';
 
 const App = () => {
   return (
@@ -47,6 +48,7 @@ const App = () => {
         <Route path="/posts" component={Posts} />
         <Route path="/profile" component={Profile} />
         <Route path="/" component={Home} />
+        <Route path={NotFound}/>
       </Switch>
     </BrowserRouter>
   );
