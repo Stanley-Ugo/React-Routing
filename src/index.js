@@ -24,7 +24,7 @@ const App = () => {
 
     <Route path="/" exact component={Home}/>
     <Route path="/posts" exact component={Posts}/>
-    <Route path="/posts/5" component={PostItem}/>
+    <Route path="/posts/:id" component={PostItem}/>
     <Route path="/profile" exact component={Profile}/>
   </BrowserRouter>
   )

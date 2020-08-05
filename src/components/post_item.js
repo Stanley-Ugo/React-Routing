@@ -1,8 +1,9 @@
 import React from 'react';
 
-const PostItem = () => {
+const PostItem = (props) => {
+    console.log(props);
     return (
-        <div>Post Item</div>
+    <div>{props.match.params.id}</div>
     )
 }
 
