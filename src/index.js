@@ -8,9 +8,17 @@ import Profile from './components/profile';
 
 
 const App = () => {
-  return <div>
-    Hello
-  </div>
+  return (
+    <BrowserRouter>
+    <header>
+      header
+    </header>
+
+    <Route path="/" exact component={Home}/>
+    <Route path="/posts" exact component={Posts}/>
+    <Route path="/profile" exact component={Profile}/>
+  </BrowserRouter>
+  )
 }
 
 ReactDOM.render(
