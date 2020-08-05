@@ -5,6 +5,7 @@ import { BrowserRouter, Route, Link } from 'react-router-dom';
 import Home from './components/home';
 import Posts from './components/post';
 import Profile from './components/profile';
+import PostItem from './components/post_item';
 
 
 const App = () => {
@@ -23,6 +24,7 @@ const App = () => {
 
     <Route path="/" exact component={Home}/>
     <Route path="/posts" exact component={Posts}/>
+    <Route path="/posts/5" component={PostItem}/>
     <Route path="/profile" exact component={Profile}/>
   </BrowserRouter>
   )
