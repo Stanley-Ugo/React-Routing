@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { BrowserRouter, Route } from 'react-router-dom';
+import { BrowserRouter, Route, Link } from 'react-router-dom';
 
 import Home from './components/home';
 import Posts from './components/post';
@@ -11,7 +11,10 @@ const App = () => {
   return (
     <BrowserRouter>
     <header>
-      header
+      <Link to="/">Home</Link><br/>
+      <Link to="/posts">Posts</Link><br/>
+      <Link to="/profile">Profile</Link><br/>
+      <br/><br/>
     </header>
 
     <Route path="/" exact component={Home}/>
