@@ -1,10 +1,13 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
-const Profile = () => {
+const Profile = (props) => {
+
+    console.log(props);
     return (
-        <div>
-            Profile
-        </div>
+        <Link to={{
+            pathname: `${props.match.url}/posts`
+        }}>go to Posts</Link>
     )
 }
 

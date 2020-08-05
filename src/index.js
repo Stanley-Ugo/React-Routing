@@ -13,7 +13,11 @@ const App = () => {
     <header>
       <Link to="/">Home</Link><br/>
       <Link to="/posts">Posts</Link><br/>
-      <Link to="/profile">Profile</Link><br/>
+      <Link to={{
+        pathname: '/profile',
+        hash: '#francis',
+        search: '?profile=true'
+      }}>Profile</Link><br/>
       <br/><br/>
     </header>
 
