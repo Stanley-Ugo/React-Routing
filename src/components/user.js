@@ -1,4 +1,5 @@
 import React from 'react';
+import UserHoc from './hoc/userHoc';
 
 const User = () => {
     return (
@@ -8,4 +9,4 @@ const User = () => {
     )
 }
 
-export default User;    
+export default UserHoc(User, 'Hello i am');    
