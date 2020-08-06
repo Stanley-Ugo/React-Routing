@@ -1,6 +1,13 @@
 import React from 'react';
 import UserHoc from './hoc/userHoc';
 
+const User2 = () => {
+    return (
+        <div>
+            User2
+        </div>
+    )
+}
 const User = () => {
     return (
         <div>
@@ -9,4 +16,4 @@ const User = () => {
     )
 }
 
-export default UserHoc(User, 'Hello i am');    
+export default UserHoc(User,User2, 'Hello i am');    
