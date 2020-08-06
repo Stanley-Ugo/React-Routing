@@ -1,18 +1,13 @@
 import React from "react";
-import { Link, Redirect } from "react-router-dom";
+import Card from './hoc/card';
 
 const Profile = (props) => {
   console.log(props);
   return (
     <>
-      <Redirect from="/profile" to="/" />
-      <Link
-        to={{
-          pathname: `${props.match.url}/posts`,
-        }}
-      >
-        go to Posts
-      </Link>
+      <Card>
+        Hello Guys
+      </Card>
     </>
   );
 };
