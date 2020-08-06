@@ -30,6 +30,7 @@ const App = () => {
         >
           Posts
         </NavLink>
+        <br/>
         <NavLink
           to="/conditional"
           exact
