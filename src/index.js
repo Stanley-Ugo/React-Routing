@@ -48,7 +48,7 @@ const App = () => {
         <Route path="/posts" component={Posts} />
         <Route path="/profile" component={Profile} />
         <Route path="/" component={Home} />
-        <Route path={NotFound}/>
+        <Route path={NotFound} />
       </Switch>
     </BrowserRouter>
   );

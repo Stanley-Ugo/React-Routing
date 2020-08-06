@@ -5,7 +5,7 @@ class Home extends Component {
   constructor(){
     super();
 
-    this.state = { name: 'francis'}
+    this.state = { name: 'Steve Junior'}
     console.log('1 - constructor')
   }
 
@@ -13,10 +13,17 @@ class Home extends Component {
     console.log('2 - getDerivedStateFromProps');
     return null;
   }
+
+  static shouldComponentUpdate(nextProps, nextState){
+    if(nextState.name === 'Steve'){
+      return false
+    }
+    return true
+  }
   render(){
     console.log('3 - render')
     return(
-      <div>Home</div>
+      <div onClick={()=> this.setState({name: 'Steve Junior'})}>Change Name</div>
     )
   }
 
