@@ -7,6 +7,7 @@ import Posts from "./components/post";
 import Profile from "./components/profile";
 import PostItem from "./components/post_item";
 import NotFound from './components/404';
+import Conditional from './components/conditional';
 
 const App = () => {
   return (
@@ -29,6 +30,14 @@ const App = () => {
         >
           Posts
         </NavLink>
+        <NavLink
+          to="/conditional"
+          exact
+          activeStyle={{ color: "red" }}
+          activeClassName="selected"
+        >
+          Conditional
+        </NavLink>
         <br />
         <NavLink
           to="/profile"
@@ -47,6 +56,7 @@ const App = () => {
         <Route path="/posts/:id" component={PostItem} />
         <Route path="/posts" component={Posts} />
         <Route path="/profile" component={Profile} />
+        <Route path="/conditional" component={Conditional} />
         <Route path="/" component={Home} />
         <Route path={NotFound} />
       </Switch>
