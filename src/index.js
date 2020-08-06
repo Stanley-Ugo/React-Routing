@@ -9,6 +9,7 @@ import PostItem from "./components/post_item";
 import NotFound from './components/404';
 import Conditional from './components/conditional';
 import PureComponent from './components/pureComponent';
+import User from './components/user';
 
 const App = () => {
   return (
@@ -49,6 +50,15 @@ const App = () => {
         >
           Conditional
         </NavLink>
+        <br/>
+        <NavLink
+          to="/User"
+          exact
+          activeStyle={{ color: "red" }}
+          activeClassName="selected"
+        >
+          User
+        </NavLink>
         <br />
         <NavLink
           to="/profile"
@@ -66,6 +76,7 @@ const App = () => {
       <Switch>
         <Route path="/posts/:id" component={PostItem} />
         <Route path="/posts" component={Posts} />
+        <Route path="/user" component={User} />
         <Route path="/profile" component={Profile} />
         <Route path="/conditional" component={Conditional} />
         <Route path="/pureComponent" component={PureComponent} />
