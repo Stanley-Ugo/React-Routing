@@ -1,13 +1,22 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from "react";
 
-class PureComponent extends Component {
-    render(){
-        return (
-            <div>
-                Pure Comp
-            </div>
-        )
-    }
+class PureComp extends PureComponent {
+  state = {
+    name: "Francis",
+  };
+
+  // This Component will re-render only if the state changes
+
+  render() {
+    return (
+      <>
+        <h3>{this.state.name}</h3>
+        <button onClick={() => this.setState({ name: "Francis" })}>
+          click to change name
+        </button>
+      </>
+    );
+  }
 }
 
-export default PureComponent;
+export default PureComp;
