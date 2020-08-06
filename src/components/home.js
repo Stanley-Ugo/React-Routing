@@ -27,6 +27,12 @@ class Home extends Component {
     )
   }
 
+  componentDidUpdate(prevProps, prevState){
+    console.log('x - componentDIdUpdate');
+    console.log(prevState);
+    console.log(this.state);
+  }
+
   componentDidMount(){
     console.log('4 - componentDidMount')
   }
